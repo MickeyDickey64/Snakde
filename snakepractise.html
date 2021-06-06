@@ -390,7 +390,7 @@ for(i=0;i<td.length;i++){
 }*/
 
 function up() {
-	move(-24);
+	move(-17);
 }
 function left() {
 	move(-1);
@@ -399,6 +399,23 @@ function right() {
 	move(1);
 }
 function down() {
-	move(24);
+	move(17);
 }
+
+function move(shift) {
+	if(position + shift >= 0 && position + shift < td.length) {
+	if (position % 17 == 0 && shift == -1) {
+		// condition for left move from left dot
+	}
+	else if(position % 24 == 23 && shift == 1) {
+			// condition for right move from right dot
+		}
+	else {
+			td[position].bgColor = "white";
+			position = position + shift;
+			td[position].bgColor = "orange";
+			}
+		}
+	}
+	
 </script>
