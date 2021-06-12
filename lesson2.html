@@ -1,0 +1,93 @@
+<script>
+
+function log() {
+	// whatever you want
+	console.log("blablalba"); // print message to console
+}
+
+function square(a) {
+	console.log(a*a); // + - * /
+}
+
+function ifElse(a) {
+	if(a>5) {
+		console.log("a>5");
+	} else {
+		console.log("a<=5");
+	}
+}
+
+// anyVaraible - Hungarian annotation
+// any_variable
+
+function returnValue(a,b,c) {
+	return (a + b)*c; // return means we will leave this function
+	console.log("this code is never executed");
+}
+
+function isNumberPositive(n) {
+	return n>0;
+}
+
+function checkTheNumber(a) {
+	if(isNumberPositive(a)) {
+		console.log("The number " + a + " is positive");
+	} else if(a==0) {
+		console.log("The number is null");
+	} else {
+		console.log("The number " + a + " is negative");
+	}
+}
+
+function forCicle() {
+	for(i=0; i<10; i++) {
+		console.log(i);
+	}
+}
+
+function factorialCalculation(n) { //recursion
+	if(n>1) {
+		return n * factorialCalculation(n-1);
+	} else {
+		return 1;
+	}
+}
+
+function factorialCalculation2(n) { //using for cicle
+	result = 1;
+	for(i=1; i<=n; i++) {
+		result = result * i;
+	}
+	return result;
+}
+
+/*
+	for(i=1; i<=n; i++) {
+		result = result * i;
+	}
+
+	i=1;
+	if(i<=n) {
+		result = result * i;
+		i++; // i=i+1
+	}
+	//GOTO line 70
+*/
+
+
+var variable = 1;
+function changeVariable(v) {
+	variable = v;
+}
+
+var variable = 1;
+function changeVariable2(v) {
+	var variable = v;
+}
+
+variable = 1;
+function changeVariable3(v) {
+	variable = v;
+}
+
+</script>
